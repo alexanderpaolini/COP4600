@@ -1,6 +1,6 @@
 == Chapter 4: The Abstraction: The Process
 
-A *process* is just a *running program*. Program itself just sits on the disk -- You can think of the program as the actual executable. The process as what is running. 
+A *process* is just a *running program*. Program itself just sits on the disk -- You can think of the program as the actual executable. The process as what is running.
 
 In order to run more than one process at a time, we *virtualize* the CPU. This means to *time share* the cpu.
 
@@ -8,7 +8,7 @@ In order to run more than one process at a time, we *virtualize* the CPU. This m
 
 *context switch* -- what gives the OS the ability to stop one program and start another.
 
-*schedueling policy* -- makes the decision of which programs should run. 
+*schedueling policy* -- makes the decision of which programs should run.
 
 === 4.1 The Abstraction: A Process
 
@@ -26,7 +26,7 @@ The process api has a few required features:
 
 - Create -- the method to create the process.
 - Destroy -- the method to destroy the process. This is forceful.
-- Wait -- To wait for a process to stop running. 
+- Wait -- To wait for a process to stop running.
 - Miscellaneus Control -- suspend, etc
 - Status -- get info from the process
 
@@ -99,10 +99,10 @@ struct trapframe *tf; // Trap frame for the
 // current interrupt
 };
 ```
-Note that there are more states. For example *final/zombie* or *initial*. 
+Note that there are more states. For example *final/zombie* or *initial*.
 
 You can reach zombie state if you are looking at the exit codes or something.
 
-=== 4.6 Summary 
+=== 4.6 Summary
 
 process = running program

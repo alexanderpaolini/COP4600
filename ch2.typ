@@ -12,7 +12,7 @@ The operating system then manages these.
 
 === Virtualizing CPU
 
-The operating system virtualizes the CPU to allow for multiple programs to "simultaneously" run. Do note that this isn't truly simultaneous. 
+The operating system virtualizes the CPU to allow for multiple programs to "simultaneously" run. Do note that this isn't truly simultaneous.
 
 The *policy* is the system by which the OS chooses which program to be running at any given time. This is mainly hueristics based on many factors.
 
@@ -36,17 +36,17 @@ The operating system must also handle persistence of data. Programs cannot exist
 
 Some of these might be *input/output (I/O)*, as well as storage in *hard disk drives (HDDs)* or *solid-state drives (SSDs)*.
 
-THe software in the OS manages this *file system* and any *files* the user creates. 
+THe software in the OS manages this *file system* and any *files* the user creates.
 
 Files, unlike memory and CPU, are not virtual and are expected to be shared between programs. (You wouldn't want a file written by nvim to be only accessable by nvim, would you?)
 
 === Design Goals
 
-The basic goal of the OS is to create enough *abstractions* to make the system easy to use for most developers. 
+The basic goal of the OS is to create enough *abstractions* to make the system easy to use for most developers.
 
 Some other goals are for high performance, or to minimize the overheads of the OS. Virtualization is nice, but it does maintain an overhead that might not be wanted in other places.
 
-We also want to provide *protection* between applications, and the OS and appplications. If we are to *isolate* different processes from eachother, we can reduce unexpected interference and thus have more stable programs. 
+We also want to provide *protection* between applications, and the OS and appplications. If we are to *isolate* different processes from eachother, we can reduce unexpected interference and thus have more stable programs.
 
 Do note that building a reliable operating system is hard.
 

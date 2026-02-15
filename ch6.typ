@@ -10,7 +10,7 @@ Control is especially important.
 
 === 6.1 Basic Technique: Limited Direct Execution
 
-The basic idea is to run the program directly on the CPU. 
+The basic idea is to run the program directly on the CPU.
 
 - create a process entry
 - allocate memory
@@ -36,16 +36,16 @@ How can we want to run a restricted operation (I/O request, or gain access to re
 
 We could let the process do whatever it wants, but then we wouldn't be able to restrict permissions based on some factors (file permissions).
 
-One approach is to create different processor modes. *user mode* and *kernel mode*. 
+One approach is to create different processor modes. *user mode* and *kernel mode*.
 
 - user mode -- a process can't issue I/O requests, so it would get killed if it did so
 - kernel mode -- code in this mode can basically do whatever it wants
 
-A process can execute a system call that raises into kernel mode, in which the OS runs its code. 
+A process can execute a system call that raises into kernel mode, in which the OS runs its code.
 
 System calls deal with *trap* instructions and *return from trap* instructions. A *trap* instruction jumps into kernel and raises the privlege level to kernel mode. The *return from trap* instruction, returns back to user mode.
 
-The kernel doesn't let the user program specify which address to jump to. That would allow for arbitrary code execution. Instead a *trap table* maps traps to their *trap handlers* (or essentially their addresses). 
+The kernel doesn't let the user program specify which address to jump to. That would allow for arbitrary code execution. Instead a *trap table* maps traps to their *trap handlers* (or essentially their addresses).
 
 Note that being able to find the trap rables is a *privleged* operation. You don't want any process to just be able to write their own trap table.
 
@@ -72,7 +72,7 @@ Aside from *rebooting the machine* there aren't many options to kill a process.
 
 A quick approach to do this is to have a *timer interrupt* that raises an interupt every X amount of miliseconds. Thus, the OS regains control of the CPU.
 
-Once the timer is started (in the boot sequence), the OS is safe to handle control over to different processes. 
+Once the timer is started (in the boot sequence), the OS is safe to handle control over to different processes.
 
 ==== Saving and Restoring Context
 
