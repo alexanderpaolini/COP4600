@@ -56,7 +56,7 @@ Thus, we have two phases in *LDE*:
 
 === 6.3 Problem #2: Switching Between Processes
 
-Switching between processes is super complicated. If a process is running, that means the OS is **not** running.
+Switching between processes is super complicated. If a process is running, that means the OS is *not* running.
 
 ==== A Cooperative Approach: Wait for System Calls
 
